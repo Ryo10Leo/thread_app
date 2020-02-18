@@ -1,0 +1,40 @@
+version: '3'
+volumes:
+  thread_postgres_data:
+  thread_public_data:
+  thread_tmp_data:
+  thread_log_data:
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Docker/app/Dockerfile
+    env_file:
+      - ./environments/app.env
+    command: bundle exec puma -C config/puma.rb
+    volumes:
+      - .:/my_app
+      - thread_public_data:/my_app/public
+      - thread_tmp_data:/my_app/tmp
+      - thread_log_data:/my_app/log
+    depends_on:
+      - db
+  db:
+    build:
+      context: .
+      dockerfile: ./Docker/db/Dockerfile
+    env_file:
+      - ./environments/db.env
+    volumes:
+      - thread_postgres_data:/var/lib/postgresql/data
+  web:
+    build:
+      context: .
+      dockerfile: ./Docker/web/Dockerfile
+    volumes:
+      - thread_public_data:/my_app/public
+      - thread_tmp_data:/my_app/tmp
+    ports:
+      - 80:80
+    depends_on:
+      - app
