@@ -15,6 +15,11 @@
 
   <body>
     <%= render 'shared/header' %>
+      <% if flash[:notice] %>
+      <div class="flash-message">
+        <p>メッセージ: <%= flash[:notice] %></p>
+      </div>
+      <% end %>
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>
