@@ -1,6 +1,9 @@
 <div class="page-bg">
     <% if logged_in? %>
-        <%= render 'static_pages/thread'%>
+        <div class="new-threads">
+        <h2>投稿スレ</h2>
+        <%= render @posts %>
+        </div>
     <% else %>
         <div class="home-content">
         <h2>さあ、はじめよう!</h2>
