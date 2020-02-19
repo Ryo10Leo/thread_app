@@ -11,8 +11,7 @@
     padding: 3%;
 }
 
-.profile h2,
-.my-theads h2{
+.profile h2{
     font-size: 2rem;
     font-weight: lighter;
     margin-bottom:60px;
@@ -36,36 +35,12 @@ dd {
     float: left ;
     margin-left: 1em ;
 }
-.my-theads h2{
-    border:1px solid black ;
-    border-radius: 2px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    width: 50%;
-    padding: 3%;
-}
 
-.my-theads .thread{
+.thread{
     border:1px solid black ;
     border-radius: 2px;
     background-color: white;
     margin: 0 auto;
     width: 50%;
     padding: 2%;
-}
-
-.my-theads .thread h1{
-    font-size:1.275rem;
-}
-
-.thread-category{
-    font-size:0.875rem ;
-}
-
-.tread-post-date{
-    text-align: right;
-    font-size:0.875rem ;
 }

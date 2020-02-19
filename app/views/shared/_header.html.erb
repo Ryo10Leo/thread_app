@@ -6,9 +6,20 @@
     <nav>
         <ul class="main-nav">
             <li><%= link_to 'ホーム', root_path %></li>
+        <% if logged_in? %>
+            <li class="menu__single"><a>アカウント</a>
+                <ul class="menu__second-level">
+                    <li><%= link_to 'プロフィール', user_path(current_user) %></li>
+                    <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+                </ul>
+            </li>
+            <li class="post-tread-bottun"><%= link_to '新規スレ作成', '#' %></li>
+        <% else %>
             <li><%= link_to '新規登録', signup_path  %></li>
-            <li><%= link_to 'ログイン', '#' %></li>
+            <li><%= link_to 'ログイン', login_path %></li>
             <li><%= link_to 'About', about_path %></li>
+        <% end %>
+
         </ul><!--main-nav-->
     </nav>
   </div>

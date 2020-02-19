@@ -1,8 +1,13 @@
 <div class="page-bg">
-    <div class="home-content">
-    <h2>さあ、はじめよう!</h2>
-    <%= link_to signup_path do %>
-    <button class="signup-button">Sing up</button>
-    </div>
+    <% if logged_in? %>
+        <%= render 'static_pages/thread'%>
+    <% else %>
+        <div class="home-content">
+        <h2>さあ、はじめよう!</h2>
+        <%= link_to signup_path do %>
+        <button class="signup-button">Sing up</button>
+        <% end %>
+        <p>アカウントをお持ちの方は<%= link_to 'ログイン', login_path %>してください。</p>
+        </div>
     <% end %>
 </div>
