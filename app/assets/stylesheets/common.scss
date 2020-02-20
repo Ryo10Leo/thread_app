@@ -149,6 +149,24 @@ footer{
 
 /* thread */
 
+.thread{
+    border:1px solid black ;
+    border-radius: 2px;
+    background-color: white;
+    margin: 0 auto;
+    width: 50%;
+    padding: 2%;
+    transition: all 0.2s ease;
+}
+
+.thread:hover{
+    opacity: 0,8;
+    transform: scale(1.05,1.05);
+}
+
+.thread a{
+    color: #616161 !important;
+}
 .new-threads h2,
 .my-threads h2{
     border:1px solid black ;
@@ -175,4 +193,15 @@ footer{
 .thread-post-date{
     text-align: right;
     font-size:0.875rem ;
+}
+
+/* edit_icons */
+.edit-icons i{
+    margin-left:15px ;
+    font-size:18px ;
+    color: #CCCCCC;
+}
+
+.edit-icons i:hover{
+    opacity: 0.8;
 }
