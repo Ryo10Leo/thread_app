@@ -1,8 +1,8 @@
 <div class="thread">
-<%= link_to post_path(post) do %>
+    <%= link_to post_path(post) do %>
     <h1 class="thread-title"><%= post.title %></h1>
+    <% end %>
     <div class="thread-category"><%= render 'posts/post_category', object: post %></div>
     <div class="thread-post-date"><%= l post.created_at %></div>
     <%= render 'shared/edit_icons', object: post %>
-<% end %>
 </div>

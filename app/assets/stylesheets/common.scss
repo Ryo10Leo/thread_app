@@ -157,6 +157,7 @@ footer{
     width: 50%;
     padding: 2%;
     transition: all 0.2s ease;
+    position: relative;
 }
 
 .thread:hover{
@@ -185,6 +186,10 @@ footer{
     font-size:1.275rem;
 }
 
+.thread h1:hover{
+    opacity: 0.8;
+}
+
 .thread-category{
     font-size:0.875rem ;
 }
@@ -193,12 +198,21 @@ footer{
     color: #616161;
 }
 
+.category-link:hover{
+    opacity: 0.8;
+}
+
 .thread-post-date{
     text-align: right;
     font-size:0.875rem ;
 }
 
 /* edit_icons */
+.edit-icons{
+    position:absolute;
+    bottom: 5px;
+    left: 5px;
+}
 .edit-icons i{
     margin-left:15px ;
     font-size:18px ;

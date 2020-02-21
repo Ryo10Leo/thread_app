@@ -20,6 +20,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @category_list = @post.categories.pluck(:name).join(",")
   end
 
   def update
