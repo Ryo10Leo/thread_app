@@ -176,6 +176,7 @@ footer{
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    margin-bottom: 50px;
     width: 50%;
     padding: 3%;
     font-size: 2rem;
@@ -207,6 +208,10 @@ footer{
     font-size:0.875rem ;
 }
 
+.home-threads{
+    margin-bottom: 50px;
+}
+
 /* edit_icons */
 .edit-icons{
     position:absolute;
@@ -221,4 +226,45 @@ footer{
 
 .edit-icons i:hover{
     opacity: 0.8;
+}
+
+/* pagenation */
+.pagination{
+    height: 50px;
+    list-style: none;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pagination a{
+    color: white;
+    background-color: #303f7a;
+    padding: 15px 25px;
+    text-decoration: none;
+}
+
+.pagination a:hover{
+    opacity: 0.8;
+}
+
+.pagination em{
+    padding: 15px 25px;
+    font-style: normal;
+    color: white;
+    background: #6f7eb8;
+    font-family: sans-serif;
+}
+
+.previous_page.disabled,
+.next_page.disabled {
+    display: none;
+}
+
+.previous_page,
+.next_page{
+    background-color: #00acee !important;
+}
+.previous_page a,
+.next_page a{
+    color: white;
 }

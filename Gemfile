@@ -19,6 +19,7 @@ gem 'rails-i18n'
 gem 'tag-it-rails', '~> 2.0'
 gem 'jquery-rails', '4.3.1'
 gem 'jquery-ui-rails'
+gem 'will_paginate'
 
 
 group :development, :test do

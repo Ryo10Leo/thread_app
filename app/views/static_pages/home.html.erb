@@ -2,7 +2,15 @@
     <% if logged_in? %>
         <div class="new-threads">
         <h2>新着スレ</h2>
+
+        <%= will_paginate @posts, previous_label: '<', next_label: '>', inner_window: 1 %>
+
+        <div class="home-threads">
         <%= render @posts %>
+        </div>
+
+        <%= will_paginate @posts, previous_label: '<', next_label: '>', inner_window: 1 %>
+
         </div>
     <% else %>
         <div class="home-content">
