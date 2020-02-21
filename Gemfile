@@ -16,6 +16,9 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'rails-i18n'
+gem 'tag-it-rails', '~> 2.0'
+gem 'jquery-rails', '4.3.1'
+gem 'jquery-ui-rails'
 
 
 group :development, :test do

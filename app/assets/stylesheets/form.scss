@@ -30,7 +30,8 @@ form label{
 }
 
 input[type="text"],
-textarea, select, .uneditable-input {
+textarea, select, .uneditable-input,
+ul.tagit  {
     padding: 5px 5px;
     outline: none;
     border: 1px solid #DDD;
@@ -52,6 +53,15 @@ textarea:focus {
     color:black !important;
     box-shadow: 0 0 7px #3498db;
     border: 1px solid #3498db;
+}
+
+ul.tagit {
+    overflow: auto;
+    margin-left: inherit;
+    margin-right: inherit;
+}
+ul.tagit li.tagit-choice .tagit-close .text-icon {
+    display: inline !important;
 }
 
 .submit-btn{
@@ -96,4 +106,8 @@ textarea:focus {
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1;
+}
+
+#thread-tags li{
+    list-style: none;
 }

@@ -2,13 +2,19 @@
 <div class="page-bg">
     <div class="form">
         <h2>新規スレッド作成</h2>
-        <%= form_for(@post) do|f| %>
+        <%= form_for(@post, url: '/posts/new') do|f| %>
 
             <%= render'shared/error_messages',object: f.object %>
 
             <div class="form-group">
             <%= f.label "スレッド名" %>
             <%= f.text_field :title ,class: 'form-control' %>
+            </div>
+
+            <div class="thread-tags-field">
+            <%= f.label "カテゴリー" %>
+            <ul id="thread-tags">
+            </ul>
             </div>
 
             <%= f.submit '投稿する', class: "submit-btn" %>

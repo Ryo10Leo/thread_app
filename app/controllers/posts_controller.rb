@@ -8,7 +8,9 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
+    category_list = params[:category_list].split(",")
     if @post.save
+      @post.save_categories(category_list)
       flash[:notice] = "スレッドの投稿が完了しました！"
       redirect_to user_path(current_user)
     else
@@ -23,6 +25,8 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(post_params)
+      @post.save_categories(category_list)
+      remove_not_used_cat
       flash[:notice] = "スレッドの編集が完了しました！"
       @posts = current_user.posts
       redirect_to current_user
@@ -37,6 +41,7 @@ class PostsController < ApplicationController
 
   def destroy
     Post.find(params[:id]).destroy
+    remove_not_used_cat
     flash[:notice] = "スレッドを削除しました！"
     redirect_to current_user
   end

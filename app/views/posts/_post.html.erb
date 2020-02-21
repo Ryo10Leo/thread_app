@@ -1,7 +1,7 @@
 <div class="thread">
 <%= link_to post_path(post) do %>
     <h1 class="thread-title"><%= post.title %></h1>
-    <div class="thread-category">カテゴリ:福井,観光スポット,急募</div>
+    <div class="thread-category"><%= render 'posts/post_category', object: post %></div>
     <div class="thread-post-date"><%= l post.created_at %></div>
     <%= render 'shared/edit_icons', object: post %>
 <% end %>

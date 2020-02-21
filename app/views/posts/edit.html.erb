@@ -10,6 +10,12 @@
             <%= f.text_field :title ,class: 'form-control' %>
             </div>
 
+            <div class="thread-tags-field">
+            <%= f.label "カテゴリー" %>
+            <ul id="thread-tags">
+            </ul>
+            </div>
+
             <%= f.submit '編集する', class: "submit-btn" %>
 
         <% end %>
