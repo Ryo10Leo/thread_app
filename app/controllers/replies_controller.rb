@@ -1,4 +1,6 @@
 class RepliesController < ApplicationController
+    before_action :logged_in_user, only: [:create]
+    before_action :correct_user, only: [:destroy]
 
     include RepliesHelper
 
@@ -32,8 +34,7 @@ private
     end
 
     def correct_user
-      post = get_post_for_reply
-      @reply = post.replies.find_by(id: params[:id])
-      redirect_to root_url if @reply.nil?
+      @reply = Reply.find_by(id: params[:id])
+      redirect_to root_url if current_user?(@reply.user)
     end
 end
