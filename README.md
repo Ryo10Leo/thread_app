@@ -1,6 +1,6 @@
 # 2ちゃんねる風掲示板サイト
 
-URL↓
+URL→
 https://thread-sample-app.work/
 
 
