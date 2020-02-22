@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   post '/posts/new', to: 'posts#create'
   resources :posts
+
+  resources :replies
 end

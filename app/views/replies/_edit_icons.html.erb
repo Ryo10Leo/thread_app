@@ -1,0 +1,7 @@
+<% if current_user?(object.user) %>
+<div class="edit-icons">
+    <%= link_to reply_path(object), method: :delete, data:{confirm:"こちらの投稿を削除しますか？"} do %>
+    <i class="fa fa-trash"></i>
+    <% end %>
+</div>
+<% end %>

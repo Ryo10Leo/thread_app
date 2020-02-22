@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200220160350) do
+ActiveRecord::Schema.define(version: 20200222002826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,26 @@ ActiveRecord::Schema.define(version: 20200220160350) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "replies", force: :cascade do |t|
+    t.string "name"
+    t.string "content"
+    t.bigint "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id", "created_at"], name: "index_replies_on_post_id_and_created_at"
+    t.index ["post_id"], name: "index_replies_on_post_id"
+  end
+
+  create_table "reply_users", force: :cascade do |t|
+    t.integer "reply_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reply_id", "user_id"], name: "index_reply_users_on_reply_id_and_user_id", unique: true
+    t.index ["reply_id"], name: "index_reply_users_on_reply_id"
+    t.index ["user_id"], name: "index_reply_users_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "user_id"
     t.string "email"
@@ -51,4 +71,5 @@ ActiveRecord::Schema.define(version: 20200220160350) do
   end
 
   add_foreign_key "posts", "users"
+  add_foreign_key "replies", "posts"
 end

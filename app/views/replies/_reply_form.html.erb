@@ -1,0 +1,21 @@
+    <%= form_for(@reply,url: replies_path,remote: true) do|f| %>
+    <div class="reply-form">
+        <h1>リプライフォーム</h1>
+
+            <%= render'shared/error_messages',object: f.object %>
+
+            <div class="form-group">
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control' %>
+            </div>
+
+            <div class="form-group">
+            <%= f.label :content %>
+            <%= f.text_area :content, class: 'form-control' %>
+            </div>
+            <%= hidden_field_tag :user_id,post.user.id %>
+            <%= hidden_field_tag :post_id,@post.id %>
+
+            <%= f.submit '投稿', class: "submit-btn",data: { disable_with: '投稿中' } %>
+    </div>
+    <% end %>

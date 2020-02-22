@@ -2,19 +2,15 @@
     <div class="show-content">
         <div class="show-thread">
             <h1 class="thread-title"><%= @post.title %></h1>
-            <div class="thread-category">カテゴリ:福井,観光スポット,急募</div>
+            <div class="thread-category"><%= render 'posts/post_category', object: @post %></div>
             <div class="thread-post-date"><%= l @post.created_at %></div>
         </div>
 
         <div class="thread-reply">
-            <div class="reply">
-                <div class="reply-info">1: 名前:名無し 投稿日:2020/02/18 22:25 ID: 4ifh9ur3e</div>
-                <div class="reply-content">可愛かったです！！！</div>
-            </div>
-            <div class="reply">
-                <div class="reply-info">2: 名前:名無し 投稿日:2020/02/18 22:27 ID: hdjufhe3</div>
-                <div class="reply-content">三村もかわいいよ</div>
-            </div>
+            <%= render 'replies/reply' %>
+        </div>
+        <div class="thread-reply-form">
+            <%= render 'replies/reply_form', post: @post %>
         </div>
     </div>
 </div>

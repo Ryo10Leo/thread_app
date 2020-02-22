@@ -13,6 +13,8 @@ class User < ApplicationRecord
 
     validates :password,presence: true,length: { minimum: 6 },allow_nil:true
 
+    has_many :reply_users, dependent: :destroy
+    has_one :replies, through: :reply_users
     has_many :posts, dependent: :destroy
 
     def User.digest(string)

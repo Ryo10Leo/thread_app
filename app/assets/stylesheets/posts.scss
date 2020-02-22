@@ -9,6 +9,7 @@
 }
 
 .reply{
+    position: relative;
     border:1px solid black ;
     border-radius: 2px;
     background-color: white;
@@ -19,4 +20,52 @@
 
 .reply-content{
     padding: 3%;
+}
+
+.thread-reply-form{
+    border:1px solid black ;
+    border-radius: 2px;
+    background-color: #303f7a;
+    margin: 0 auto;
+    width: 48%;
+    padding: 1%;
+}
+
+.thread-reply-form h1{
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.thread-reply-form .submit-btn{
+    background: #00acee;
+}
+
+.thread-reply-form .submit-btn:hover{
+    background: #08709a;
+}
+
+.reply-form{
+    border:initial;
+    border-radius: initial;
+    background-color: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.reply-form .form-group label{
+    color: #fff;
+}
+
+.reply-form input,
+.reply-form textarea{
+    background: #fff;
+}
+
+.red{
+    color: red;
 }
