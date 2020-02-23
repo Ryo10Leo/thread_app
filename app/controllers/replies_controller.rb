@@ -35,6 +35,6 @@ private
 
     def correct_user
       @reply = Reply.find_by(id: params[:id])
-      redirect_to root_url if current_user?(@reply.user)
+      redirect_to root_url unless current_user?(@reply.user)
     end
 end
