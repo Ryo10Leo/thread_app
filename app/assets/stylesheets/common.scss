@@ -121,6 +121,28 @@ li.menu__single:hover ul.menu__second-level {
     background-color: #08709a;
 }
 
+.search-form{
+    display: flex;
+    justify-content: center;
+}
+
+.search-form form input{
+    background: #fff;
+}
+
+.search-form form input[type="text"]{
+    margin-bottom: 0px;
+    width: 200px;
+}
+
+.search-form form input[type=submit]{
+    border-radius: 5px;
+    padding: 5px 15px 5px 15px;
+}
+
+.search-form form input[type=submit]:hover{
+    background: rgb(164, 163, 163);
+}
 
 /* FOOTER */
 

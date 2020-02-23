@@ -1,0 +1,22 @@
+<div class="page-bg">
+    <div class="search-thread">
+        <div class="result-content">
+            <h2>スレッド検索結果</h2>
+            <% if @selected_category %>
+                <p>「<%= @selected_category.name %>」</p>
+            <% else %>
+                <p>「<%= @search_word %>」</p>
+            <% end %>
+            <h1><%= @posts.length %>件</h1>
+        </div>
+
+        <%= will_paginate @posts, previous_label: '<', next_label: '>', inner_window: 1 %>
+
+        <div class="search-threads">
+        <%= render @posts %>
+        </div>
+
+        <%= will_paginate @posts, previous_label: '<', next_label: '>', inner_window: 1 %>
+
+    </div>
+</div>

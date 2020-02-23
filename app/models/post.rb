@@ -7,6 +7,8 @@ class Post < ApplicationRecord
 
 
     default_scope -> { order(created_at: :desc) }
+    scope :from_category, -> (category_id)  { where(id: posts_ids = PostCategory.where(category_id: category_id).select(:post_id))}
+
     validates :title,presence: true
     validates :user_id, presence: true
 

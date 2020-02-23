@@ -1,0 +1,23 @@
+.result-content{
+    border:1px solid black ;
+    border-radius: 2px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 50%;
+    padding: 3%;
+}
+
+.result-content h2{
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.result-content p{
+    font-size:2rem;
+    font-weight:bolder ;
+    color: #303f7a;
+}

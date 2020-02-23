@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   resources :posts
 
   resources :replies
+
+  get      '/search',  to: 'search#index'
+
 end
