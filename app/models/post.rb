@@ -7,11 +7,14 @@ class Post < ApplicationRecord
 
 
     default_scope -> { order(created_at: :desc) }
+
+    #カテゴリに該当するスレッドを取得
     scope :from_category, -> (category_id)  { where(id: posts_ids = PostCategory.where(category_id: category_id).select(:post_id))}
 
     validates :title,presence: true
     validates :user_id, presence: true
 
+    #スレッドの検索
     def self.search(search)
       if search
         Post.where(id: Reply.where(['content LIKE ?', "%#{search}%"]).select(:post_id) )

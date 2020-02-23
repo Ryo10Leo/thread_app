@@ -17,6 +17,7 @@ class User < ApplicationRecord
     has_one :replies, through: :reply_users
     has_many :posts, dependent: :destroy
 
+    #ダイジェストの作成
     def User.digest(string)
         cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
@@ -39,12 +40,14 @@ class User < ApplicationRecord
         BCrypt::Password.new(remember_digest).is_password?(remember_token)
     end
 
+    #ユーザーが保持するRemember_digestを削除
     def forget
         update_attribute(:remember_digest, nil)
     end
 
     private
 
+    #メールアドレスの小文字化
     def downcase_email
         self.email.downcase!
     end
