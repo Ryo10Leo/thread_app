@@ -1,0 +1,12 @@
+ja:
+    activerecord:
+      models:
+        reply: リプライ
+      attributes:
+        reply:
+          id: ID
+          created_at: 登録日時
+          updated_at: 更新日時
+          name: お名前
+          content: 投稿内容
+          post_id: スレッドID
