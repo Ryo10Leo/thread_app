@@ -25,6 +25,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    category_list = params[:category_list].split(",")
     if @post.update_attributes(post_params)
       @post.save_categories(category_list)
       remove_not_used_cat
