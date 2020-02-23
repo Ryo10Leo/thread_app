@@ -10,6 +10,15 @@ class Post < ApplicationRecord
     validates :title,presence: true
     validates :user_id, presence: true
 
+    def self.search(search)
+      if search
+        Post.where(id: Reply.where(['content LIKE ?', "%#{search}%"]).select(:post_id) )
+            .or(Post.where(['title LIKE ?', "%#{search}%"]))
+      else
+        Post.all
+      end
+    end
+
     #スレッドのカテゴリを保存
     def save_categories(tags)
         current_tags = self.categories.pluck(:name) unless self.categories.nil?
