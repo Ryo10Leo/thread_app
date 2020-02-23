@@ -1,1 +1,2 @@
+$(".thread-reply-form").html("<%= escape_javascript(render 'replies/reply_form', post: @post) %>");
 $(".thread-reply").html("<%= escape_javascript(render('replies/reply')) %>");

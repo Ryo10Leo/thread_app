@@ -11,6 +11,7 @@ class RepliesController < ApplicationController
         if @reply.save
             @reply_user = @reply.build_reply_user(user_id: current_user.id)
             if @reply_user.save
+                @reply = Reply.new
                 @post.replies
             else
                 render 'posts/show'
