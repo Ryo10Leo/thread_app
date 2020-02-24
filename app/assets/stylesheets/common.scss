@@ -35,7 +35,7 @@ img{
 
 #pageTop {
     position: fixed;
-    bottom: 100px;
+    bottom: 60px;
     right: 20px;
     z-index: 998;
   }
@@ -57,6 +57,21 @@ img{
   #pageTop a:hover {
     text-decoration: none;
     opacity: 0.7;
+  }
+
+  #pageDown{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 998;
+  }
+
+  #pageDown{
+      color: #303f7a;;
+  }
+
+  #pageDown:hover{
+      opacity: 0.8;
   }
 
 /* HEADER */

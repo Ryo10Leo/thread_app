@@ -9,8 +9,9 @@
         <div id="thread-reply" class="thread-reply">
             <%= render 'replies/reply' %>
         </div>
-        <div class="thread-reply-form">
+        <div id="new-reply" class="thread-reply-form">
             <%= render 'replies/reply_form', post: @post %>
         </div>
     </div>
 </div>
+<%= link_to '最新のレスへ移動', post_path(@post, anchor: "new-reply"),id: "pageDown" %>
