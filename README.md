@@ -1,8 +1,10 @@
 # 2ちゃんねる風掲示板サイト
 
-URL→
+## サイトURL
 https://thread-sample-app.work/
 
+## デモ動画
+[デモ動画](https://youtu.be/MaVBSDVPY20)でアプリの概要が１分で確認できます。
 
 ## 機能一覧
 - ログイン機能( Remember me 機能付 )

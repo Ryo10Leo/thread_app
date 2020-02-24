@@ -1,10 +1,10 @@
 $(document).on('turbolinks:load', function(){
-  //page topボタン
 
+    //page topボタン
   $(function(){
     var topBtn=$('#pageTop');
     topBtn.hide();
-  
+
     $(window).scroll(function(){
       if($(this).scrollTop()>80　&& $(window).width() > 559){
         topBtn.fadeIn();
@@ -12,12 +12,11 @@ $(document).on('turbolinks:load', function(){
         topBtn.fadeOut();
       }
     });
-  
-    topBtn.click(function(){
-      $('body,html').animate({
-      scrollTop: 0},500);
-      return false;
-    });
-  
+
+        topBtn.click(function(){
+        $('body,html').animate({
+        scrollTop: 0},500);
+        return false;
+        });
     });
 });
