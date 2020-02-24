@@ -3,6 +3,10 @@
 ## サイトURL
 https://thread-sample-app.work/
 
+## サンプルユーザー
+email    「sample@example.com」
+password 「password」
+
 ## デモ動画
 [デモ動画](https://youtu.be/MaVBSDVPY20)でアプリの概要が１分で確認できます。
 
