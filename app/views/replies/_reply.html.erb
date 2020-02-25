@@ -3,7 +3,7 @@
     <div class="reply">
         <div class="reply-info"><%= i + 1 %>: 名前: <%= user_name(reply) %> 投稿日: <%= l reply.created_at %>
         ID: <span class="user_id <%= color(reply)%>"><%= user_id(reply) %></span></div>
-        <div class="reply-content"><%= reply.content %></div>
+        <div class="reply-content"><%= simple_format(reply.content) %></div>
         <%= render 'replies/edit_icons', object: reply %>
     </div>
     <% end %>
