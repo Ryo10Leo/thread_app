@@ -27,6 +27,7 @@ module PostsHelper
             end
         end
 
+        # >>○○にリンク付
         def add_anchor_to_(content)
             if anchors = content.scan(/>>[0-9]+/)
                 anchors.each do |anchor,i|
