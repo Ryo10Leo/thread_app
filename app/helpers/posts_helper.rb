@@ -26,4 +26,15 @@ module PostsHelper
                 reply.name
             end
         end
+
+        def add_anchor_to_(content)
+            if anchors = content.scan(/>>[0-9]+/)
+                anchors.each do |anchor,i|
+                    number = anchor.match(/[0-9]+/)
+                    text = "<a href=#{@post.id}#reply-#{number}>#{anchor}</a>"
+                    content.sub!(/#{anchor}/,text)
+                end
+            end
+            simple_format(content)
+        end
 end
