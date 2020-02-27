@@ -4,7 +4,7 @@
         <div class="reply-info"><%= i + 1 %>: 名前: <%= user_name(reply) %> 投稿日: <%= l reply.created_at %>
         ID: <span class="user_id <%= color(reply)%>"><%= user_id(reply) %></span></div>
         <div class="reply-content"><%= add_anchor_to_(reply.content) %></div>
-        <% if !reply.picture %>
+        <% if reply.picture.url %>
         <div class="reply-picture"><%= image_tag reply.picture %></div>
         <% end %>
         <%= render 'replies/edit_icons', object: reply %>
