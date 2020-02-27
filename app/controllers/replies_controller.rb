@@ -31,7 +31,7 @@ class RepliesController < ApplicationController
 private
 
     def reply_params
-      params.require(:reply).permit(:name, :content)
+      params.require(:reply).permit(:name, :content, :picture)
     end
 
     def correct_user
