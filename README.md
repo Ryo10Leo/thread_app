@@ -20,6 +20,7 @@ password 「password」
 - スレッド検索機能(スレッド名、リプライの内容を横断検索)
 - カテゴリ別スレッド表示
 - リプライ投稿機能
+- リプライ画像投稿機能(carrirwave)
 - リプライ削除機能(自身のリプライのみ)
 - ユーザープロフィール閲覧機能(自身の情報のみ)
 - 未使用カテゴリー自動削除機能( 記事更新時にSQLで未使用のカテゴリを抽出して、DBから削除 )
@@ -28,5 +29,5 @@ password 「password」
 ## 以下デプロイ関連
 - Docker, docker-composeを使った開発rails環境構築( Nginx, Puma, PostgreSQL)
 - AWSを使ったデプロイ(EC2,Docker,docker-composeでコンテナ起動)
-- ドメイン設定(お名前.com, Route53)
+- ドメイン設定(お名前.com, Route53,S3)
 - Https通信(ALB)
