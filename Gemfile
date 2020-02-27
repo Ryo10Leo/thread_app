@@ -21,7 +21,7 @@ gem 'jquery-rails', '4.3.1'
 gem 'jquery-ui-rails'
 gem 'will_paginate'
 gem 'carrierwave'
-gem 'fog'
+gem 'fog-aws'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
