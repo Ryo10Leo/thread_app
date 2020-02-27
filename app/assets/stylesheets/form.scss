@@ -30,8 +30,10 @@ form label{
 }
 
 input[type="text"],
-textarea, select, .uneditable-input,
-ul.tagit  {
+input[type="password" i],
+textarea, select,
+.uneditable-input,
+ul.tagit {
     padding: 5px 5px;
     outline: none;
     border: 1px solid #DDD;
@@ -49,6 +51,7 @@ input {
 }
 
 input[type="text"]:focus,
+input[type="password" i]:focus,
 textarea:focus {
     color:black !important;
     box-shadow: 0 0 7px #3498db;
