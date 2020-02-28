@@ -24,10 +24,11 @@ password 「password」
 - リプライ削除機能(自身のリプライのみ)
 - ユーザープロフィール閲覧機能(自身の情報のみ)
 - 未使用カテゴリー自動削除機能( 記事更新時にSQLで未使用のカテゴリを抽出して、DBから削除 )
+- 閲覧履歴表示機能
 - ページネーション機能( will_pagenate )
 
 ## 以下デプロイ関連
 - Docker, docker-composeを使った開発rails環境構築( Nginx, Puma, PostgreSQL)
 - AWSを使ったデプロイ(EC2,Docker,docker-composeでコンテナ起動)
-- ドメイン設定(お名前.com, Route53,S3)
+- ドメイン設定(お名前.com, Route53,S3,cloud front)
 - Https通信(ALB)
