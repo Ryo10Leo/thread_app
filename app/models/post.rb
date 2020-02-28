@@ -1,11 +1,19 @@
 class Post < ApplicationRecord
 
+    #スレッド投稿したユーザー
     belongs_to :user
+
+    #スレッドのカテゴリ
     has_many :post_categories, dependent: :destroy
     has_many :categories, through: :post_categories
+
+    #スレッドのレス
     has_many :replies, dependent: :destroy
 
+    #スレッド閲覧履歴
+    has_many :browsing_histories, dependent: :destroy
 
+    #投稿順
     default_scope -> { order(created_at: :desc) }
 
     #カテゴリに該当するスレッドを取得

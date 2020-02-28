@@ -187,6 +187,53 @@ li.menu__single:hover ul.menu__second-level {
     background: rgb(164, 163, 163);
 }
 
+//main,aside
+.container{
+    display: flex;
+}
+
+.main{
+    margin-left: auto;
+    width:60%;
+}
+
+.sidebar{
+    width:25%;
+    margin-right:2%;
+}
+
+.history-lists{
+    padding: 10px;
+}
+
+.sidebar h1{
+    font-weight: normal;
+    border-bottom: solid 2px #303f7a;
+    padding-bottom: 2px;
+    margin-bottom: 35px;
+}
+
+.sidebar a{
+    color: #616161;
+}
+
+.sidebar li{
+   list-style: inside;
+   margin-bottom: 5px;
+}
+
+.sidebar li:hover{
+    opacity: 0.8;
+}
+
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+}
+
+
 /* FOOTER */
 
 footer{
@@ -219,7 +266,7 @@ footer{
     border-radius: 2px;
     background-color: white;
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
     padding: 2%;
     transition: all 0.2s ease;
     position: relative;

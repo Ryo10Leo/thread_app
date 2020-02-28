@@ -38,8 +38,14 @@ class PostsController < ApplicationController
   end
 
   def show
+
     @post = Post.find(params[:id])
     @reply = Reply.new
+
+    save_new_history(@post)
+
+    remove_extra_history_stock
+
   end
 
   def destroy

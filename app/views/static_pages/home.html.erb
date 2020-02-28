@@ -4,11 +4,16 @@
         <h2>新着スレ</h2>
 
         <%= will_paginate @posts, previous_label: '<', next_label: '>', inner_window: 1 %>
-
-        <div class="home-threads">
-        <%= render @posts %>
+        <div class="container">
+            <div class="main">
+                <div class="home-threads">
+                <%= render @posts %>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <%= render 'shared/sidebar'%>
+            </aside>
         </div>
-
         <%= will_paginate @posts, previous_label: '<', next_label: '>', inner_window: 1 %>
 
         </div>

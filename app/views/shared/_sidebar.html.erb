@@ -1,0 +1,10 @@
+<div class="history-lists sticky">
+    <h1>スレッド閲覧履歴</h1>
+    <ul>
+        <% current_user.browsing_posts.each do |post| %>
+        <%= link_to post_path(post) do %>
+        <li><%= post.title %></li>
+        <% end %>
+    <% end %>
+    </ul>
+</div>

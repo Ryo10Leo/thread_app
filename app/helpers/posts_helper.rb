@@ -38,4 +38,28 @@ module PostsHelper
             end
             simple_format(content)
         end
+
+        #ユーザーの閲覧履歴を更新
+        def save_new_history(post)
+
+            new_history = current_user.browsing_histories.build(post_id: post.id)
+
+            if current_user.browsing_histories.exists?(post_id: "#{params[:id]}")
+                old_history = current_user.browsing_histories.find_by(post_id: "#{params[:id]}")
+                old_history.destroy
+            end
+
+            new_history.save
+        end
+
+        #閲覧履歴が5件を越えたら一番古いデータを削除
+        def remove_extra_history_stock
+
+            histories_stock_limit = 5
+            histories = current_user.browsing_histories.all
+
+            if histories.count > histories_stock_limit
+            histories[0].destroy
+            end
+        end
 end
