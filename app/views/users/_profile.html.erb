@@ -8,10 +8,14 @@
     <tr>
         <th class="item"> Email</th><th><%= @user.email %></th>
     </tr>
-        <% else %>
+        <% elsif current_user.provider == 'twitter' || 'facebook' %>
     <tr>
         <th colspan="2" class="social-account"><span><%= current_user.provider %></span>アカウントでログインしています。</div>
-        <% end %>
     </tr>
+        <% else %>
+    <tr>
+        <th colspan="2" class="social-account"><span>Google</span>アカウントでログインしています。</div>
+    </tr>
+        <% end %>
     </table>
 </div>
