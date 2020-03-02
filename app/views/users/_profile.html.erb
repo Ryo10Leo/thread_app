@@ -1,9 +1,17 @@
 <div class="profile">
     <h2>プロフィール</h2>
-    <dl class="informations">
-        <dt class="item"> User_id</dt>
-        <dd><%= @user.user_id %></dd>
-        <dt class="item"> Email</dt>
-        <dd><%= @user.email %></dd>
-    </dl>
+    <table class="informations">
+     <tr>
+        <th class="item"> User_id</th><th><%= @user.user_id %></th>
+     </tr>
+        <% if !current_user.provider %>
+    <tr>
+        <th class="item"> Email</th><th><%= @user.email %></th>
+    </tr>
+        <% else %>
+    <tr>
+        <th colspan="2" class="social-account"><span><%= current_user.provider %></span>アカウントでログインしています。</div>
+        <% end %>
+    </tr>
+    </table>
 </div>

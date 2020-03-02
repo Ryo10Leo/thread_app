@@ -26,5 +26,21 @@
 
             <%= f.submit 'Login', class: "submit-btn" %>
         <% end %>
+
+        <div class="sosial-login">
+            <h1>他のアカウントでログインする</h1>
+            <div class="social-login-accounts">
+            <%= link_to '/auth/twitter', class: "btn btn-social btn-twitter" do %>
+                <span class="fa fa-twitter"></span> Twitter
+            <% end %>
+            <%= link_to '/auth/facebook', class: "btn btn-social btn-facebook" do %>
+                <span class="fa fa-facebook"></span> Facebook
+            <% end %>
+            <%= link_to '/auth/google-oauth2', class: "btn btn-social btn-google" do %>
+                <span class="fa fa-google"></span> Google
+            <% end %>
+            </div>
+        </div>
+
     </div>
 </div>

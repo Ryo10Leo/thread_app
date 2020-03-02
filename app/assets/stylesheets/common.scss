@@ -380,3 +380,59 @@ footer{
 .next_page a{
     color: white;
 }
+
+.social-account span{
+    color:#303f7a ;
+}
+
+// .sosial-login
+
+.sosial-login h1{
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.social-login-accounts{
+    display: flex;
+}
+
+.btn-social{
+    display: flex;
+    align-items: center;
+    border: 1px #616161 solid;
+    color: #616161;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
+}
+
+.btn-social:hover{
+    opacity: 0.8;
+}
+
+.btn-twitter span{
+    margin-right: 30px;
+    font-size: 35px;
+    color: #00acee;
+}
+
+.btn-facebook span{
+    padding: 3px 3px 3px 10px ;
+    margin-right: 20px;
+    font-size: 35px;
+    border-radius: 5px;
+    color: #fff;
+    background: #3b5998;
+}
+
+.btn-google span{
+    padding: 3px 5px 3px 5px ;
+    margin-right: 20px;
+    font-size: 35px;
+    border-radius: 5px;
+    color: #fff;
+    background: #c53727;
+}
