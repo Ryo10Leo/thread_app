@@ -8,7 +8,7 @@
     <tr>
         <th class="item"> Email</th><th><%= @user.email %></th>
     </tr>
-        <% elsif current_user.provider == 'twitter' || current_user.provider ==　'facebook' %>
+        <% elsif current_user.provider == 'twitter' || current_user.provider == 'facebook' %>
     <tr>
         <th colspan="2" class="social-account"><span><%= current_user.provider %></span>アカウントでログインしています。</div>
     </tr>
