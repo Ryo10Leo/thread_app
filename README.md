@@ -12,6 +12,7 @@ password 「password」
 
 ## 機能一覧
 - ログイン機能( Remember me 機能付 )
+- ソーシャルログイン機能( Twitter,Facebook,Google )
 - スレッド閲覧機能
 - スレッド投稿機能
 - スレッド編集機能
@@ -30,5 +31,5 @@ password 「password」
 ## 以下デプロイ関連
 - Docker, docker-composeを使った開発rails環境構築( Nginx, Puma, PostgreSQL)
 - AWSを使ったデプロイ(EC2,Docker,docker-composeでコンテナ起動)
-- ドメイン設定(お名前.com, Route53,S3,cloud front)
+- ドメイン設定(お名前.com,Route53,S3,cloud front)
 - Https通信(ALB)
