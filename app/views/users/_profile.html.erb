@@ -12,7 +12,7 @@
     <tr>
         <th colspan="2" class="social-account"><span><%= current_user.provider %></span>アカウントでログインしています。</div>
     </tr>
-        <% else %>
+        <% elsif current_user.provider == 'google' %>
     <tr>
         <th colspan="2" class="social-account"><span>Google</span>アカウントでログインしています。</div>
     </tr>
